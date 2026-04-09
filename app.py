@@ -10,9 +10,23 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # -------------------- LOAD MODEL --------------------
-model = pickle.load(open('./saved_models/RandomForestRegressor.pkl', 'rb'))
-scaler = pickle.load(open('./saved_scaling/scaler.pkl', 'rb'))
+import gdown
+import os
+import pickle
 
+file_id = "1ZkzjaaohzBIU_Y8Q8XlHkWv5TKEDgiZd"
+url = f"https://drive.google.com/uc?id={file_id}"
+
+# Download model if not exists OR file is empty
+if not os.path.exists("model.pkl") or os.path.getsize("model.pkl") == 0:
+    gdown.download(url, "model.pkl", quiet=False)
+
+# Load model
+with open("model.pkl", "rb") as f:
+    model = pickle.load(f)
+# Load scaler (keep as local file)
+with open("saved_scaling/scaler.pkl", "rb") as f:
+    scaler = pickle.load(f)
 # -------------------- FORMAT FUNCTION --------------------
 def format_value(value):
     if value >= 10000000:
