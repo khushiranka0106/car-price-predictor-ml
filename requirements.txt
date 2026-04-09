@@ -1,12 +1,7 @@
+streamlit
 pandas
 numpy
+scikit-learn
 matplotlib
 seaborn
-plotly
-six
-scikit-learn
-sqlalchemy
-pymysql
-ipykernel
-cryptographypandas
 gdown
