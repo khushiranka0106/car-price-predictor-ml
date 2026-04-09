@@ -1,0 +1,11 @@
+pandas
+numpy
+matplotlib
+seaborn
+plotly
+six
+scikit-learn
+sqlalchemy
+pymysql
+ipykernel
+cryptography
