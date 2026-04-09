@@ -8,4 +8,5 @@ scikit-learn
 sqlalchemy
 pymysql
 ipykernel
-cryptography
+cryptographypandas
+gdown
