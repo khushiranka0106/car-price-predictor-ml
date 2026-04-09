@@ -25,7 +25,7 @@ if not os.path.exists("model.pkl") or os.path.getsize("model.pkl") == 0:
 with open("model.pkl", "rb") as f:
     model = pickle.load(f)
 # Load scaler (keep as local file)
-with open("saved_scaling/scaler.pkl", "rb") as f:
+with open("scaler.pkl", "rb") as f:
     scaler = pickle.load(f)
 # -------------------- FORMAT FUNCTION --------------------
 def format_value(value):
