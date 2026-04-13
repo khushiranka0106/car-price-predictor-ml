@@ -33,7 +33,7 @@ A Machine Learning web application that predicts used car prices based on variou
 ---
 
 ## 🔹 Live Demo
-👉 (Add your deployed link here after deployment)
+👉 (https://car-price-predictor-ml-f5sennvr7j5a5kjzfz2888.streamlit.app/)
 
 ---
 
