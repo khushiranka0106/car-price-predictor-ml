@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Car Analysis</title>
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='analysis.css') }}">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+
+        <div class="logo">
+            🚗 CarPrice AI
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="/">Home</a>
+            </li>
+
+            <li>
+                <a href="/predict">Predict</a>
+            </li>
+
+            <li>
+                <a href="/analysis">Analysis</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <!-- ================= HEADER ================= -->
+
+    <section class="analysis-header">
+
+        <h1>Dataset Analysis Dashboard</h1>
+
+        <p>
+            Visual insights and analytics from used car dataset
+            using Machine Learning and Data Science.
+        </p>
+
+    </section>
+
+    <!-- ================= CHARTS ================= -->
+
+    <section class="charts-container">
+
+        <!-- 1 -->
+
+        <div class="chart-card">
+
+            <h2>Most Sold Cars</h2>
+
+            <img src="{{ url_for('static', filename='images/most_car_sold.png') }}"
+                alt="Most Sold Cars">
+
+        </div>
+
+        <!-- 2 -->
+
+        <div class="chart-card">
+
+            <h2>Fuel Type Analysis</h2>
+
+            <img src="{{ url_for('static', filename='images/fule_type.png') }}"
+                alt="Fuel Type">
+
+        </div>
+
+        <!-- 3 -->
+
+        <div class="chart-card">
+
+            <h2>Transmission Analysis</h2>
+
+            <img src="{{ url_for('static', filename='images/transmission.png') }}"
+                alt="Transmission">
+
+        </div>
+
+        <!-- 4 -->
+
+        <div class="chart-card">
+
+            <h2>Price Distribution</h2>
+
+            <img src="{{ url_for('static', filename='images/price_distribution.png') }}"
+                alt="Price Distribution">
+
+        </div>
+
+        <!-- 5 -->
+
+        <div class="chart-card">
+
+            <h2>Vehicle Age vs KM Driven</h2>
+
+            <img src="{{ url_for('static', filename='images/scatter_plot.png') }}"
+                alt="Scatter Plot">
+
+        </div>
+
+        <!-- 6 -->
+
+        <div class="chart-card">
+
+            <h2>Correlation Heatmap</h2>
+
+            <img src="{{ url_for('static', filename='images/heatmap.png') }}"
+                alt="Heatmap">
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#0b0f1a;
+    color:white;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#111827;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:bold;
+    color:#00bfff;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#00bfff;
+}
+
+/* ================= HEADER ================= */
+
+.analysis-header{
+    text-align:center;
+    padding:60px 20px 30px;
+}
+
+.analysis-header h1{
+    font-size:50px;
+    color:#00bfff;
+    margin-bottom:20px;
+}
+
+.analysis-header p{
+    font-size:20px;
+    color:#cbd5e1;
+    max-width:900px;
+    margin:auto;
+    line-height:1.6;
+}
+
+/* ================= CHARTS ================= */
+
+.charts-container{
+    width:90%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(500px,1fr));
+    gap:35px;
+    padding-bottom:50px;
+}
+
+.chart-card{
+    background:#111827;
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 0 20px rgba(0,191,255,0.15);
+    transition:0.3s;
+}
+
+.chart-card:hover{
+    transform:translateY(-5px);
+}
+
+.chart-card h2{
+    margin-bottom:20px;
+    color:#00bfff;
+    text-align:center;
+    font-size:28px;
+}
+
+.chart-card img{
+    width:100%;
+    border-radius:15px;
+    background:white;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .analysis-header h1{
+        font-size:35px;
+    }
+
+    .analysis-header p{
+        font-size:16px;
+    }
+
+    .charts-container{
+        grid-template-columns:1fr;
+    }
+
+}

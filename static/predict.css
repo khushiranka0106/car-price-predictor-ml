@@ -1,0 +1,275 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#07111f;
+    color:white;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:25px 80px;
+
+    background:#08111f;
+
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.logo{
+
+    font-size:38px;
+
+    font-weight:bold;
+
+    color:#00bfff;
+}
+
+ul{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:40px;
+}
+
+ul li a{
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    transition:0.3s;
+}
+
+ul li a:hover{
+
+    color:#00bfff;
+}
+
+/* ================= MAIN SECTION ================= */
+
+.predict-container{
+
+    width:90%;
+
+    margin:60px auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:50px;
+
+    align-items:center;
+}
+
+/* ================= LEFT CARD ================= */
+
+.predict-box{
+
+    background:#10233d;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    box-shadow:0 0 30px rgba(0,0,0,0.4);
+}
+
+.predict-box h1{
+
+    font-size:55px;
+
+    color:#00bfff;
+
+    margin-bottom:10px;
+}
+
+.predict-box p{
+
+    color:#cbd5e1;
+
+    margin-bottom:25px;
+
+    font-size:18px;
+}
+
+/* ================= FORM ================= */
+
+form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+}
+
+input,
+select{
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#0f172a;
+
+    color:white;
+
+    font-size:16px;
+
+    outline:none;
+}
+
+input::placeholder{
+
+    color:#cbd5e1;
+}
+
+input:focus,
+select:focus{
+
+    border:1px solid #00bfff;
+
+    box-shadow:0 0 12px rgba(0,191,255,0.5);
+}
+
+/* ================= BUTTON ================= */
+
+button{
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:linear-gradient(
+    90deg,
+    #2563eb,
+    #00bfff
+    );
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 0 20px rgba(0,191,255,0.5);
+}
+
+/* ================= RESULT ================= */
+
+.result-box{
+
+    margin-top:25px;
+
+    background:#0f172a;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    text-align:center;
+}
+
+.result-box h2{
+
+    margin-bottom:10px;
+
+    color:#cbd5e1;
+}
+
+.result-box h1{
+
+    font-size:50px;
+
+    color:#00bfff;
+}
+
+/* ================= IMAGE ================= */
+
+.predict-image{
+
+    display:flex;
+
+    justify-content:center;
+}
+
+.predict-image img{
+
+    width:100%;
+
+    max-width:650px;
+
+    height:500px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+    box-shadow:0 0 30px rgba(0,0,0,0.5);
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:1000px){
+
+    nav{
+
+        flex-direction:column;
+
+        gap:20px;
+
+        padding:20px;
+    }
+
+    .predict-container{
+
+        grid-template-columns:1fr;
+    }
+
+    .predict-box h1{
+
+        font-size:40px;
+    }
+
+    ul{
+
+        gap:20px;
+    }
+
+    .predict-image img{
+
+        height:320px;
+    }
+}
