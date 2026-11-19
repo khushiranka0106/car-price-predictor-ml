@@ -21,12 +21,34 @@ url = f"https://drive.google.com/uc?id={file_id}"
 if not os.path.exists("model.pkl") or os.path.getsize("model.pkl") == 0:
     gdown.download(url, "model.pkl", quiet=False)
 
+
+import os
+import gdown
+
+# Download model if not available
+if not os.path.exists("model.pkl") or os.path.getsize("model.pkl") == 0:
+    gdown.download(
+        id="1Qm0-VDSYOXIfdaWf14SironhwIumxRWz",
+        output="model.pkl",
+        quiet=False
+    )
+
+# Download scaler if not available
+if not os.path.exists("scaler.pkl") or os.path.getsize("scaler.pkl") == 0:
+    gdown.download(
+        id="1dD6Dbr9mtaTlGzVTOnoIzKAcIzhm-u06",
+        output="scaler.pkl",
+        quiet=False
+    )
+
 # Load model
 with open("model.pkl", "rb") as f:
     model = pickle.load(f)
-# Load scaler (keep as local file)
+
+# Load scaler
 with open("scaler.pkl", "rb") as f:
     scaler = pickle.load(f)
+
 # -------------------- FORMAT FUNCTION --------------------
 def format_value(value):
     if value >= 10000000:
